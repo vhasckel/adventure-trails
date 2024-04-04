@@ -1,3 +1,4 @@
+import Button from "../Button";
 import styles from "./styles.module.css";
 
 function Hero() {
@@ -11,6 +12,7 @@ function Hero() {
           Prepare-se para explorar novos horizontes e se conectar com a natureza
           através do Adventure Trails!
         </p>
+        <Button />
       </div>
     </div>
   );
