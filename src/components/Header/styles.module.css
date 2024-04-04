@@ -1,0 +1,23 @@
+header {
+    background-color: #155d27;
+    position: fixed;
+    width: 100vw;
+}
+
+.logo,
+.links {
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    padding: .3rem 5rem;
+}
+
+.logo {
+    justify-content: space-between;
+}
+
+.links {
+    gap: 3rem;
+}
