@@ -5,4 +5,5 @@ button {
     background-color: #155d27;
     color: white;
     letter-spacing: .8px;
+    max-width: fit-content;
 }

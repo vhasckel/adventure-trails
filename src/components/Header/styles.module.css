@@ -12,7 +12,7 @@ header {
     display: flex;
     flex-direction: row;
     gap: 3rem;
-    padding: .3rem 5rem;
+    padding: 1rem 8rem;
 }
 
 .logo {

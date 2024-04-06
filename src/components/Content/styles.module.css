@@ -1,0 +1,38 @@
+.container,
+.more {
+    padding: 5rem 20rem;
+}
+
+.text {
+    padding: 1rem 0 1rem 0;
+    width: 100%;
+    font-size: 20px;
+    text-align: start;
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+
+}
+
+.more {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img {
+    background-image: url(../../assets/trail-content.avif);
+    width: 620px;
+    height: 330px;
+    background-size: cover;
+}
+
+.more h2 {
+    max-width: 20ch;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.5;
+}
