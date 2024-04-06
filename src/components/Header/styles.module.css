@@ -3,6 +3,8 @@ header {
     position: fixed;
     width: 100vw;
     z-index: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .logo,
@@ -11,13 +13,16 @@ header {
     color: white;
     display: flex;
     flex-direction: row;
-    gap: 3rem;
-    padding: 1rem 8rem;
+    width: fit-content;
 }
 
 .logo {
+    width: 80rem;
+    padding: 1.2rem 0;
+    display: flex;
     justify-content: space-between;
 }
+
 
 .links {
     gap: 3rem;
