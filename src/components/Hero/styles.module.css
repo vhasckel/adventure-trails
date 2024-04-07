@@ -1,40 +1,35 @@
 .container {
-    position: relative;
     height: 100vh;
-    background: url(../src/assets/trail.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../src/assets/trail-woman.avif);
     background-size: cover;
-}
-
-.container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Cor preta com opacidade de 0.8 */
+    background-position: center;
+    position: relative;
 }
 
 .content {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
     color: white;
-    z-index: 1;
+    font-size: 2rem;
+    padding: 0 1rem;
 }
 
-h1 {
-    max-width: 25ch;
+h1,
+.text {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .text {
-    max-width: 80ch;
-    text-align: center;
     font-size: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+@media (min-width: 1200px) {
+    .content {
+        padding: 0 5rem;
+    }
 }

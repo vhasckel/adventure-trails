@@ -1,4 +1,12 @@
-footer {
-    background-color: #155d27;
-    padding: 1rem 20rem;
+.footer {
+    background-color: #294B29;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p {
+    font-size: .75rem;
+    color: #E1F0DA;
 }

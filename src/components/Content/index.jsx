@@ -15,7 +15,9 @@ function Content() {
           dificuldade, pontos de interesse naturais e dicas úteis para uma
           experiência eco-friendly.
         </p>
-        <Button />
+        <div className={styles.btn}>
+          <Button />
+        </div>
       </div>
       <div className={styles.more}>
         <h2>
