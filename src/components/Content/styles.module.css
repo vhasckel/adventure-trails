@@ -48,12 +48,14 @@
 
 @media (min-width: 1200px) {
     .container {
-        padding: 2rem 5rem;
+        padding: 10rem 15rem;
     }
 
     .more {
-        padding: 0 5rem;
+        padding: 0 15rem;
+        padding-bottom: 5rem;
         flex-direction: row;
+        align-items: start;
     }
 
     .img {
@@ -67,6 +69,19 @@
     .more h2 {
         text-align: start;
         max-width: 20ch;
+        font-size: 2rem;
 
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .more h2 {
+        font-size: 3rem;
+    }
+
+    .btn {
+        margin-top: 3rem;
     }
 }

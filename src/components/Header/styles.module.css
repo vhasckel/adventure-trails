@@ -47,6 +47,10 @@ header {
     }
 
     .nav {
-        padding: 0 5rem;
+        padding: 0 15rem;
+    }
+
+    .logo {
+        font-size: 1rem;
     }
 }
