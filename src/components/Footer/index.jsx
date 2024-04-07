@@ -2,8 +2,8 @@ import styles from "./styles.module.css";
 
 function Footer() {
   return (
-    <footer>
-      <p>Adventure Trails FD</p>
+    <footer className={styles.footer}>
+      <p>Desenvolvido por Vanessa Hasckel</p>
     </footer>
   );
 }

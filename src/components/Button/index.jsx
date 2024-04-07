@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 function Button() {
-  return <button>Explorar trilhas</button>;
+  return <button className={styles.btn}>Explorar trilhas</button>;
 }
 
 export default Button;
