@@ -14,3 +14,11 @@
 .btn:hover {
     background-color: #335c33;
 }
+
+@media (min-width: 1200px) {
+    .btn {
+        padding: 20px;
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+}
