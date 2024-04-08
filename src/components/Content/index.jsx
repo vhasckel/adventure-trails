@@ -1,4 +1,5 @@
 import Button from "../Button";
+
 import styles from "./styles.module.css";
 
 function Content() {

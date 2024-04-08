@@ -44,6 +44,7 @@ header {
     .links {
         gap: 3rem;
         display: flex;
+        align-items: center;
     }
 
     .nav {
