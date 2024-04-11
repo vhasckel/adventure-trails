@@ -1,0 +1,70 @@
+{
+  "trails": [
+    {
+      "trail_name": "Praia da Lagoinha do Leste",
+      "city_and_state": "Florianópolis, SC",
+      "duration": "131",
+      "route": "Circular",
+      "difficulty": "Moderada",
+      "trail_type": "Caminhada",
+      "trail_length": "5",
+      "trail_creator_name": "Vanessa Hasckel",
+      "image_url": "https://s2-g1.glbimg.com/V3In3jY4wCfK2zEc65ZLl7bWvho=/0x0:1280x960/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/a/y/3OUrT9TIKBDdhTEQyoow/lagoinha-do-leste-paisagem-julio-ettore.jpg"
+    },
+    {
+      "trail_name": "Costa da Lagoa",
+      "city_and_state": "Florianópolis, SC",
+      "duration": "192",
+      "route": "Ida e volta",
+      "difficulty": "Moderada",
+      "trail_type": "Caminhada",
+      "trail_length": "11,4",
+      "trail_creator_name": "Vanessa Hasckel",
+      "image_url": "https://donafloripa.com.br/wp-content/uploads/2020/08/costa-da-lagoa.jpg"
+    },
+    {
+      "trail_name": "Praia do Gravatá",
+      "city_and_state": "Florianópolis, SC",
+      "duration": "61",
+      "route": "Ida e volta",
+      "difficulty": "Moderada",
+      "trail_type": "Caminhada",
+      "trail_length": "3,1",
+      "trail_creator_name": "Vanessa Hasckel",
+      "image_url": "https://i0.wp.com/www.latitudeinfinita.com/wp-content/uploads/2020/11/trilha-do-gravata3.jpg?resize=768%2C432&ssl=1"
+    },
+    {
+      "trail_name": "Praia da Armação",
+      "city_and_state": "Florianópolis, SC",
+      "duration": "116",
+      "route": "Ponto a ponto",
+      "difficulty": "Difícil",
+      "trail_type": "Caminhada",
+      "trail_length": "8,4",
+      "trail_creator_name": "Vanessa Hasckel",
+      "image_url": "https://i.ytimg.com/vi/f15JB9OAwZM/maxresdefault.jpg"
+    },
+    {
+      "trail_name": "Pico da Coroa",
+      "city_and_state": "Florianópolis, SC",
+      "duration": "90",
+      "route": "Ida e volta",
+      "difficulty": "Moderada",
+      "trail_type": "Caminhada",
+      "trail_length": "4,5",
+      "trail_creator_name": "Vanessa Hasckel",
+      "image_url": "https://trilhandomontanhas.com/arquivos/2017-08/morro-da-coroa-lagoinha-do-leste-maior.jpg"
+    },
+    {
+      "trail_name": "Trilha das Piscinas Naturais",
+      "city_and_state": "Florianópolis, SC",
+      "duration": "29",
+      "route": "Ida e volta",
+      "difficulty": "Fácil",
+      "trail_type": "Caminhada",
+      "trail_length": "2,1",
+      "trail_creator_name": "Vanessa Hasckel",
+      "image_url": "https://destinoflorianopolis.com.br/wp-content/uploads/2017/07/piscinas-naturias-em-florian%C3%B3polis.jpg"
+    }
+  ]
+}
