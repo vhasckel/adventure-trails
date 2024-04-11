@@ -16,7 +16,7 @@ function Card({
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.image}>
-          <img src="./src/assets/trail-group.jpg" alt="" />
+          <img src={imageURL} alt="" />
         </div>
 
         <div className={styles.column}>
