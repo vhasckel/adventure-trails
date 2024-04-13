@@ -1,4 +1,5 @@
 import Content from "../../components/Content";
+import Form from "../../components/Form";
 import Hero from "../../components/Hero";
 
 function HomePage() {
@@ -11,7 +12,6 @@ function HomePage() {
         }
         showElement={true}
       />
-      <Content />
     </>
   );
 }

@@ -39,7 +39,10 @@ function Card({
               <p>Trajeto: {routeSize}km</p>
             </div>
             <div className={styles.level}>
-              <span> {level} </span>
+              <span>
+                {" "}
+                {level} {type}{" "}
+              </span>
             </div>
           </div>
 

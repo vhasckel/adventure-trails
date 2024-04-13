@@ -1,16 +1,17 @@
 import Card from "../../components/Card";
 import Hero from "../../components/Hero";
-import TrailsAPI from "../../utils/trailsAPI";
+import useTrailsAPI from "../../utils/useFetch";
 
 function ExploreTrailsPage() {
-  const trails = TrailsAPI();
+  const trails = useTrailsAPI("./api.json");
+
   return (
     <>
       <Hero showElement={false} title={"Explore trilhas incríveis"} />
       {trails.map((trail, index) => (
         <Card
           key={index}
-          trailName={trail.trail_name} // Corrigido para acessar o nome da trilha corretamente
+          trailName={trail.trail_name}
           location={trail.city_and_state}
           timeInMinutes={trail.duration}
           routeSize={trail.trail_length}
