@@ -6,11 +6,17 @@ function Hero({ showElement, title, paragraph }) {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h1>{title}</h1>
+        <div className={styles.textContainer}>
+          <h1 className={styles.title}>{title}</h1>
+        </div>
         {showElement && (
           <>
-            <p className={styles.text}>{paragraph}</p>
-            <Button />
+            <div className={styles.textContainer}>
+              <p className={styles.text}>{paragraph}</p>
+            </div>
+            <div>
+              <Button text={"Explorar trilhas"} />
+            </div>
           </>
         )}
       </div>

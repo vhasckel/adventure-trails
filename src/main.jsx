@@ -3,8 +3,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import HomePage from "./pages/Home/index.jsx";
 import ExploreTrailsPage from "./pages/ExploreTrails/index.jsx";
-import "./index.css";
+import RegisterTrailPage from "./pages/RegisterTrail/index.jsx";
 import App from "./App.jsx";
+
+import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -16,8 +18,12 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/ExploreTrails",
+        path: "/explorar-trilhas",
         element: <ExploreTrailsPage />,
+      },
+      {
+        path: "/cadastrar-trilha",
+        element: <RegisterTrailPage />,
       },
     ],
   },
