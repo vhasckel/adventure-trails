@@ -24,18 +24,21 @@
     text-align: justify;
     line-height: 1.5;
     margin-top: 1em;
+    color: var(--text-color);
 }
 
 .title2 {
     font-size: 1.5rem;
     margin-top: 2em;
     font-weight: 400;
+    color: var(--text-color);
 }
 
 .title1 {
     font-size: 1.rem;
     margin-top: 2em;
     font-weight: 400;
+    color: var(--text-color);
 }
 
 

@@ -1,8 +1,9 @@
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-} */
+:root {
+  --primary-color: #114232;
+  --secondary-color: #E1F0DA;
+  --accent-color: #3D9970;
+  --btn-color: #87A922;
+  --text-color: #0D1A26;
+  --text-span: #5C6670;
+  --background-span: #EFF0F0;
+}

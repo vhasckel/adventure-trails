@@ -1,11 +1,10 @@
 import Button from "@mui/material/Button";
-import styles from "./styles.module.css";
 
 function CButton({ text }) {
   return (
     <Button
       style={{
-        backgroundColor: "#87A922",
+        backgroundColor: "var(--btn-color)",
       }}
       variant="contained"
     >
