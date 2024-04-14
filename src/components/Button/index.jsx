@@ -1,6 +1,17 @@
+import Button from "@mui/material/Button";
 import styles from "./styles.module.css";
-function Button() {
-  return <button className={styles.btn}>Explorar trilhas</button>;
+
+function CButton({ text }) {
+  return (
+    <Button
+      style={{
+        backgroundColor: "#87A922",
+      }}
+      variant="contained"
+    >
+      {text}
+    </Button>
+  );
 }
 
-export default Button;
+export default CButton;

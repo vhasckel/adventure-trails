@@ -1,17 +1,17 @@
 header {
-    background-color: #E1F0DA;
     position: fixed;
     width: 100vw;
     z-index: 1;
     display: flex;
     align-items: center;
-    height: 62px;
+    height: 72px;
     top: 0;
+    left: 0;
 }
 
 .nav {
     width: 100%;
-    color: #294B29;
+    color: #E1F0DA;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -19,18 +19,15 @@ header {
     padding: 0 1rem;
 }
 
-.logo {
-    display: flex;
-    font-size: .75rem;
-    align-items: center;
-    gap: .2rem;
-}
-
 .largeScreen {
     display: none;
 }
 
 @media (min-width: 1200px) {
+    header {
+        height: 82px;
+    }
+
     .smallScreen {
         display: none;
     }
@@ -48,7 +45,7 @@ header {
     }
 
     .nav {
-        padding: 0 15rem;
+        padding: 0 5rem;
     }
 
     .logo {
