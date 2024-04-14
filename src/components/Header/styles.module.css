@@ -58,7 +58,8 @@ header {
         height: 72px;
     }
 
-    .mobile {
+    .mobile,
+    .mobileMenu {
         display: none;
     }
 
