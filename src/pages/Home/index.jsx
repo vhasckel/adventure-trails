@@ -12,6 +12,7 @@ function HomePage() {
         }
         showElement={true}
       />
+      <Content />
     </>
   );
 }
