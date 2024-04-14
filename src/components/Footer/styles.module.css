@@ -1,5 +1,5 @@
 .footer {
-    background-color: #114232;
+    background-color: var(--primary-color);
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -17,7 +17,7 @@
     padding-bottom: 1.5em;
     padding-top: 1.5em;
     font-size: .75rem;
-    color: #E1F0DA;
+    color: var(--secondary-color);
 }
 
 @media (min-width: 1200px) {

@@ -11,7 +11,7 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    color: #E1F0DA;
+    color: var(--secondary-color);
     font-size: 2rem;
     padding: 0 1rem;
 }
