@@ -23,6 +23,11 @@ header {
     display: none;
 }
 
+.scrolled {
+    background-color: #114232;
+    transition: background-color 0.3s ease;
+}
+
 @media (min-width: 1200px) {
     header {
         height: 82px;
