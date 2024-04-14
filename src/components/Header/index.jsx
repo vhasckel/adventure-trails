@@ -6,6 +6,7 @@ import styles from "./styles.module.css";
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +21,10 @@ function Header() {
     };
   }, []);
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <header className={scrolled ? styles.scrolled : ""}>
       <div className={styles.nav}>
@@ -30,14 +35,25 @@ function Header() {
         </div>
 
         <div className={styles.links}>
-          <CiMenuKebab className={styles.smallScreen} size={32} />
+          <CiMenuKebab
+            className={styles.mobile}
+            size={32}
+            onClick={toggleMobileMenu}
+          />
+
+          {isMobileMenuOpen && (
+            <div className={styles.mobileMenu}>
+              <Link to="/explorar-trilhas">Explorar trilhas</Link>
+              <Link to="/cadastrar-trilha">Cadastrar trilhas</Link>
+            </div>
+          )}
 
           <Link to="/explorar-trilhas">
-            <p className={styles.largeScreen}>Explorar trilhas</p>
+            <p className={styles.desktop}>Explorar trilhas</p>
           </Link>
 
           <Link to="/cadastrar-trilha">
-            <p className={styles.largeScreen}>Cadastrar trilhas</p>
+            <p className={styles.desktop}>Cadastrar trilhas</p>
           </Link>
         </div>
       </div>
