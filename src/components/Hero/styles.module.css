@@ -1,45 +1,53 @@
 .container {
-    height: 100vh;
+    height: 70vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../src/assets/trail-woman.avif);
     background-size: cover;
     background-position: center;
-    position: relative;
+    top: 0;
 }
 
 .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     height: 100%;
-    color: white;
+    color: #E1F0DA;
     font-size: 2rem;
     padding: 0 1rem;
 }
 
-h1,
 .text {
-    text-align: center;
-    font-size: 2rem;
+    text-align: start;
+    font-size: .4em;
+    margin-bottom: 1.2rem;
+    margin-top: 1em;
+    max-width: 50ch;
 }
 
-.text {
-    font-size: 1.2rem;
-    margin-top: 1.2rem;
+.title {
+    margin-top: 62px;
+    text-align: start;
+    font-size: 1.5rem;
 }
+
 
 @media (min-width: 1200px) {
     .content {
-        padding: 0 12rem;
+        padding: 0 5rem;
     }
 
-    h1 {
-        text-align: center;
-        font-size: 3rem;
+    .title {
+        font-size: 4rem;
+        max-width: 20ch;
+    }
+
+    .textContainer {
+        width: 50%;
     }
 
     .text {
-        max-width: 100ch;
+        font-size: .65em;
+        max-width: 70ch;
         line-height: 1.5;
     }
 }

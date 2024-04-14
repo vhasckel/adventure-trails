@@ -1,23 +1,22 @@
 .btn {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #294B29;
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: 1px solid #87A922;
     color: #E1F0DA;
-    background-color: #294B29;
+    background-color: #87A922;
     letter-spacing: .8px;
     max-width: fit-content;
-    margin: 1.2rem;
+    margin: 1.2rem 0;
     font-weight: 500;
     cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #335c33;
+    background-color: #769713;
 }
 
 @media (min-width: 1200px) {
     .btn {
-        padding: 20px;
         font-size: 1rem;
         letter-spacing: 1px;
     }

@@ -8,16 +8,17 @@ function Header() {
     <header>
       <div className={styles.nav}>
         <div className={styles.logo}>
-          <CiMountain1 size={32} />
-          <Link to="/">Adventure Trails FD</Link>
+          <Link to="/">
+            <CiMountain1 size={32} />
+          </Link>
         </div>
 
         <div className={styles.links}>
           <CiMenuKebab className={styles.smallScreen} size={32} />
-          <Link to="/ExploreTrails">
+          <Link to="/explorar-trilhas">
             <p className={styles.largeScreen}>Explorar trilhas</p>
           </Link>
-          <Link to="">
+          <Link to="/cadastrar-trilha">
             <p className={styles.largeScreen}>Cadastrar trilhas</p>
           </Link>
         </div>
