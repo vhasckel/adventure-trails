@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../Button";
 
 import styles from "./styles.module.css";
@@ -15,7 +16,9 @@ function Hero({ showElement, title, paragraph }) {
               <p className={styles.text}>{paragraph}</p>
             </div>
             <div>
-              <Button text={"Explorar trilhas"} />
+              <Link to="/explorar-trilhas">
+                <Button text={"Explorar trilhas"} />
+              </Link>
             </div>
           </>
         )}

@@ -1,17 +1,18 @@
 import { Outlet } from "react-router-dom";
-import "./App.css";
+import { TrailsContextProvider } from "./context/trailsContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-// import { UsersContextProvider } from "/context/usersContext";
+
+import "./App.css";
 
 function App() {
   return (
     <>
-      {/* <UsersContextProvider> */}
-      <Header />
-      <Outlet />
-      <Footer />
-      {/* </UsersContextProvider> */}
+      <TrailsContextProvider>
+        <Header />
+        <Outlet />
+        <Footer />
+      </TrailsContextProvider>
     </>
   );
 }
