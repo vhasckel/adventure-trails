@@ -25,7 +25,7 @@ function RegisterTrailPage() {
     { value: "Ponto a ponto", label: "Ponto a ponto" },
   ];
 
-  const renderInput = (name, label, type = "text") => (
+  const renderInput = (name, label, step, type = "text") => (
     <Input
       {...register(name)}
       name={name}
@@ -33,6 +33,7 @@ function RegisterTrailPage() {
       id={`outlined-${name}`}
       label={label}
       type={type}
+      step={0.01}
     />
   );
 
