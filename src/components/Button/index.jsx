@@ -1,8 +1,9 @@
 import Button from "@mui/material/Button";
 
-function CButton({ text }) {
+function CButton({ text, type }) {
   return (
     <Button
+      type={type}
       style={{
         backgroundColor: "var(--btn-color)",
       }}
