@@ -4,17 +4,18 @@ import Card from "../../components/Card";
 import Hero from "../../components/Hero";
 
 function ExploreTrailsPage() {
-  const { trails, isLoading } = useContext(TrailsContext);
+  const { trails } = useContext(TrailsContext);
 
   return (
     <>
       <Hero showElement={false} title={"Explore trilhas incríveis"} />
-      {Array.isArray(trails) && !isLoading ? (
+      {Array.isArray(trails) &&
         trails.map((trail, index) => (
           <Card
             key={index}
             trailName={trail.trail_name}
-            location={trail.city_and_state}
+            city={trail.city}
+            state={trail.state}
             timeInMinutes={trail.duration}
             routeSize={trail.trail_length}
             level={trail.route}
@@ -22,10 +23,7 @@ function ExploreTrailsPage() {
             authorname={trail.trail_creator_name}
             imageURL={trail.image_url}
           />
-        ))
-      ) : (
-        <span>não há dados disponíveis</span>
-      )}
+        ))}
     </>
   );
 }

@@ -28,8 +28,12 @@ export const TrailsContextProvider = ({ children }) => {
     }
   }, [data]);
 
+  const addTrail = (newTrail) => {
+    setTrails((prevTrails) => [...prevTrails, newTrail]);
+  };
+
   return (
-    <TrailsContext.Provider value={{ trails, setTrails }}>
+    <TrailsContext.Provider value={{ trails, addTrail }}>
       {children}
     </TrailsContext.Provider>
   );

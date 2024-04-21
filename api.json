@@ -2,10 +2,11 @@
   "trails": [
     {
       "trail_name": "Praia da Lagoinha do Leste",
-      "city_and_state": "Florianópolis, SC",
+      "city": "Florianópolis",
+      "state": "SC",
       "duration": "131",
       "route": "Circular",
-      "difficulty": "Moderada",
+      "trail_difficulty": "Moderada",
       "trail_type": "Caminhada",
       "trail_length": "5",
       "trail_creator_name": "Vanessa Hasckel",
@@ -13,7 +14,8 @@
     },
     {
       "trail_name": "Costa da Lagoa",
-      "city_and_state": "Florianópolis, SC",
+      "city": "Florianópolis",
+      "state": "SC",
       "duration": "192",
       "route": "Ida e volta",
       "difficulty": "Moderada",
@@ -24,7 +26,8 @@
     },
     {
       "trail_name": "Praia do Gravatá",
-      "city_and_state": "Florianópolis, SC",
+      "city": "Florianópolis",
+      "state": "SC",
       "duration": "61",
       "route": "Ida e volta",
       "difficulty": "Moderada",
@@ -35,7 +38,8 @@
     },
     {
       "trail_name": "Praia da Armação",
-      "city_and_state": "Florianópolis, SC",
+      "city": "Florianópolis",
+      "state": "SC",
       "duration": "116",
       "route": "Ponto a ponto",
       "difficulty": "Difícil",
@@ -46,7 +50,8 @@
     },
     {
       "trail_name": "Pico da Coroa",
-      "city_and_state": "Florianópolis, SC",
+      "city": "Florianópolis",
+      "state": "SC",
       "duration": "90",
       "route": "Ida e volta",
       "difficulty": "Moderada",
@@ -57,7 +62,8 @@
     },
     {
       "trail_name": "Trilha das Piscinas Naturais",
-      "city_and_state": "Florianópolis, SC",
+      "city]": "Florianópolis",
+      "state": "SC",
       "duration": "29",
       "route": "Ida e volta",
       "difficulty": "Fácil",
