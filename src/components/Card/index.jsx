@@ -4,7 +4,8 @@ import styles from "./styles.module.css";
 
 function Card({
   trailName,
-  location,
+  city,
+  state,
   timeInMinutes,
   routeSize,
   level,
@@ -23,7 +24,7 @@ function Card({
           <div className={styles.title}>
             <div>
               <h3>
-                {trailName} - {location}
+                {trailName} - {city}, {state}
               </h3>
             </div>
             <CiHeart size={28} />

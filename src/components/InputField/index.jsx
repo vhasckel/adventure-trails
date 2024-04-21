@@ -1,11 +1,9 @@
 import TextField from "@mui/material/TextField";
-import { forwardRef } from "react";
 
-const Input = forwardRef(
-  ({ label, type, id, onChange, value, step, ...rest }, ref) => {
-    return (
+const InputField = ({ label, type, id, onChange, value, step, error }) => {
+  return (
+    <>
       <TextField
-        inputRef={ref}
         id={id}
         label={label}
         type={type}
@@ -13,10 +11,12 @@ const Input = forwardRef(
         onChange={onChange}
         value={value}
         step={step}
-        {...rest}
+        required
+        error={!!error}
+        helperText={error ? error.message : ""}
       />
-    );
-  }
-);
+    </>
+  );
+};
 
-export default Input;
+export default InputField;
