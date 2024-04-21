@@ -22,7 +22,6 @@ export const TrailsContextProvider = ({ children }) => {
   const [trails, setTrails] = useState([]);
 
   useEffect(() => {
-    console.log("!!data", !!data);
     if (!!data) {
       setTrails(data);
     }

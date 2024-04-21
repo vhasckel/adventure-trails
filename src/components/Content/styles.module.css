@@ -16,6 +16,7 @@
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    background-color: var(--background-color);
 }
 
 .text {
@@ -41,6 +42,20 @@
     color: var(--text-color);
 }
 
+.imgContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .imgContainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+}
 
 @media (min-width: 1200px) {
     .container {
@@ -66,7 +81,6 @@
     }
 
     .imgContainer {
-        display: flex;
         gap: 3em;
     }
 
