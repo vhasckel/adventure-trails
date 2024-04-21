@@ -1,10 +1,15 @@
-import { CiHeart, CiStar } from "react-icons/ci";
+import Rating from "@mui/material/Rating";
+import IconButton from "@mui/material/IconButton";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 import styles from "./styles.module.css";
+import { useState } from "react";
 
 function Card({
   trailName,
-  location,
+  city,
+  state,
   timeInMinutes,
   routeSize,
   level,
@@ -12,6 +17,16 @@ function Card({
   authorname,
   imageURL,
 }) {
+  const [rating, setRating] = useState(0);
+  const [isFavorited, setIsFavorited] = useState(false);
+
+  const handleFavoriteClick = () => {
+    setIsFavorited(!isFavorited);
+  };
+
+  const handleRatingChange = (event, newValue) => {
+    setRating(newValue); // Atualiza o estado de rating
+  };
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -23,10 +38,16 @@ function Card({
           <div className={styles.title}>
             <div>
               <h3>
-                {trailName} - {location}
+                {trailName} - {city}, {state}
               </h3>
             </div>
-            <CiHeart size={28} />
+            <IconButton aria-label="favorite" onClick={handleFavoriteClick}>
+              {isFavorited ? (
+                <FavoriteIcon color="error" />
+              ) : (
+                <FavoriteBorderIcon />
+              )}
+            </IconButton>
           </div>
 
           <div className={styles.author}>
@@ -35,7 +56,7 @@ function Card({
 
           <div className={styles.info}>
             <div className={styles.time}>
-              <p>Duração: {timeInMinutes}mn </p>
+              <p>Duração: {timeInMinutes}min </p>
               <p>Trajeto: {routeSize}km</p>
             </div>
             <div className={styles.level}>
@@ -48,11 +69,11 @@ function Card({
 
           <div className={styles.rating}>
             <div>
-              <CiStar size={28} />
-              <CiStar size={28} />
-              <CiStar size={28} />
-              <CiStar size={28} />
-              <CiStar size={28} />
+              <Rating
+                name="controlled-rating"
+                value={rating} // Usa o estado para definir o valor das estrelas
+                onChange={handleRatingChange} // Atualiza o estado quando a classificação muda
+              />
             </div>
             <span>Avaliações</span>
           </div>

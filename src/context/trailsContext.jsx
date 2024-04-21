@@ -22,14 +22,17 @@ export const TrailsContextProvider = ({ children }) => {
   const [trails, setTrails] = useState([]);
 
   useEffect(() => {
-    console.log("!!data", !!data);
     if (!!data) {
       setTrails(data);
     }
   }, [data]);
 
+  const addTrail = (newTrail) => {
+    setTrails((prevTrails) => [...prevTrails, newTrail]);
+  };
+
   return (
-    <TrailsContext.Provider value={{ trails, setTrails }}>
+    <TrailsContext.Provider value={{ trails, addTrail }}>
       {children}
     </TrailsContext.Provider>
   );
