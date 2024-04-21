@@ -1,39 +1,17 @@
+import { difficulties, types, states } from "../../utils/trailOptions";
 import { useForm } from "react-hook-form";
-import { difficulties, types } from "../../utils/trailOptions";
-import InputField from "../InputField";
-import SelectInput from "../SelectInput";
+import { MenuItem, TextField } from "@mui/material";
 import Button from "../Button";
-import validationMessages from "../../utils/validationMessages.json";
+import InputField from "../InputField";
+
 import styles from "./styles.module.css";
 
-const TrailForm = ({ onSubmit }) => {
+function Teste({ onSubmit }) {
   const {
     register,
     handleSubmit,
-    watch,
-    setValue,
     formState: { errors },
   } = useForm();
-
-  const difficulty = watch("rail_difficulty", "");
-  const type = watch("trail_type", "");
-
-  const handleChange = (event, fieldName) => {
-    setValue(fieldName, event.target.value);
-  };
-
-  const renderInput = (name, label, type = "text", rules = {}) => (
-    <InputField
-      {...register(name, rules)}
-      name={name}
-      onChange={(event) => handleChange(event, name)}
-      id={`outlined-${name}`}
-      label={label}
-      type={type}
-      step={type === "number" ? 0.01 : undefined}
-      error={errors[name] ? validationMessages.errors[name] : null}
-    />
-  );
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.section}>
@@ -42,84 +20,165 @@ const TrailForm = ({ onSubmit }) => {
       <div
         className={`${styles.flexColumn} ${styles.gap1em} ${styles.container}`}
       >
-        {renderInput("trail_name", "Nome da trilha", "text", {
-          minLength: {
-            value: 3,
-            message: validationMessages.errors.trail_name.minLength, // Mensagem do JSON
-          },
-          maxLength: {
-            value: 50,
-            message: validationMessages.errors.trail_name.maxLength, // Mensagem do JSON
-          },
-        })}
+        <InputField
+          name="trail_name"
+          label="Nome da trilha"
+          validationRules={{
+            required: "O nome da trilha é obrigatório.",
+            minLength: {
+              value: 3,
+              message: "O nome deve ter pelo menos 3 caracteres.",
+            },
+            maxLength: {
+              value: 50,
+              message: "O nome não pode exceder 50 caracteres.",
+            },
+          }}
+          register={register}
+          errors={errors}
+        />
 
         <div className={`${styles.flexRowBetween} ${styles.gap1em}`}>
           <div
             className={`${styles.left} ${styles.flexColumn} ${styles.gap1em}`}
           >
-            {renderInput("duration", "Duração estimada (min)", "number", {
-              required: validationMessages.errors.duration.required, // Mensagem do JSON
-              min: {
-                value: 0,
-                message: validationMessages.errors.duration.min,
-              },
-            })}
-            {renderInput("city", "Cidade", {
-              required: validationMessages.errors.city.required,
-            })}
-            {renderInput("trail_creator_name", "Nome completo do usuário", {
-              required: validationMessages.errors.trail_creator_name.required,
-            })}
+            <InputField
+              name="duration"
+              label="Duração estimada (min)"
+              type="number"
+              validationRules={{
+                required: "A duração é obrigatória.",
+                valueAsNumber: true,
+                min: { value: 10, message: "A duração mínima é 10 minutos." },
+                max: { value: 600, message: "A duração máxima é 600 minutos." },
+              }}
+              register={register}
+              errors={errors}
+            />
+            <InputField
+              name="city"
+              label="Cidade"
+              validationRules={{
+                required: "A cidade é obrigatória.",
+                minLength: {
+                  value: 3,
+                  message: "A cidade deve ter pelo menos 3 caracteres.",
+                },
+                maxLength: {
+                  value: 50,
+                  message: "A cidade não pode exceder 50 caracteres.",
+                },
+              }}
+              register={register}
+              errors={errors}
+            />
+
+            <InputField
+              name="trail_creator_name"
+              label="Nome completo do usuário"
+              validationRules={{
+                required: "O nome do criador é obrigatório.",
+                minLength: {
+                  value: 3,
+                  message: "O nome deve ter pelo menos 3 caracteres.",
+                },
+                maxLength: {
+                  value: 100,
+                  message: "O nome não pode exceder 100 caracteres.",
+                },
+              }}
+              register={register}
+              errors={errors}
+            />
           </div>
 
           <div
             className={`${styles.right} ${styles.flexColumn} ${styles.gap1em}`}
           >
-            {renderInput("trail_length", "Trajeto (km)", "number", {
-              required: validationMessages.errors.trail_length.required,
-              min: {
-                value: 0,
-                message: validationMessages.errors.trail_length.min,
-              },
-            })}
-            {renderInput("state", "Estado", {
-              required: validationMessages.errors.state.required,
-            })}
-            <SelectInput
-              {...register("rail_difficulty")}
-              id={"outlined-select-difficulty"}
-              label={"Dificuldade"}
-              value={difficulty}
-              onChange={(event) => handleChange(event, "rail_difficulty")}
-              options={difficulties}
+            <InputField
+              name="trail_length"
+              label="Trajeto (km)"
+              type="number"
+              validationRules={{
+                required: "O trajeto é obrigatório.",
+                valueAsNumber: true,
+                min: { value: 1, message: "O trajeto mínimo é 1 km." },
+                max: { value: 100, message: "O trajeto máximo é 100 km." },
+              }}
+              register={register}
+              errors={errors}
             />
+            <TextField
+              {...register("state", { required: "O estado é obrigatório." })}
+              id="outlined-select-state"
+              select
+              label="Estado"
+              error={!!errors.state}
+              helperText={errors.state ? "Por favor, escolha um estado." : ""}
+            >
+              {states.map((option) => (
+                <MenuItem key={option.value} value={option.value}>
+                  {option.label}
+                </MenuItem>
+              ))}
+            </TextField>
+            <TextField
+              {...register("trail_difficulty", {
+                required: "A dificuldade é obrigatória.",
+              })}
+              id="outlined-select-difficulty"
+              select
+              label="Dificuldade"
+              error={!!errors.trail_difficulty}
+              helperText={
+                errors.trail_difficulty
+                  ? "Por favor, escolha uma dificuldade."
+                  : ""
+              }
+            >
+              {difficulties.map((option) => (
+                <MenuItem key={option.value} value={option.value}>
+                  {option.label}
+                </MenuItem>
+              ))}
+            </TextField>
           </div>
         </div>
+        <TextField
+          {...register("trail_type", { required: "O tipo é obrigatório." })}
+          id="outlined-select-type"
+          select
+          label="Tipo"
+          error={!!errors.trail_type}
+          helperText={errors.trail_type ? "Por favor, escolha um tipo." : ""}
+        >
+          {types.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
 
-        <SelectInput
-          {...register("trail_type")}
-          id={"outlined-select-type"}
-          label={"Tipo"}
-          value={type}
-          onChange={(event) => handleChange(event, "trail_type")}
-          options={types}
+        <InputField
+          name="image_url"
+          label="URL da imagem"
+          validationRules={{
+            required: "A URL da imagem é obrigatória.",
+            pattern: {
+              value: /^(http|https):\/\/[^ "]+$/,
+              message: "Por favor, insira uma URL válida.",
+            },
+          }}
+          register={register}
+          errors={errors}
         />
-
-        {renderInput("image_url", "URL da imagem da trilha", {
-          required: validationMessages.errors.image_url.required,
-          pattern: {
-            value: /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/, // Padrão para URLs
-            message: validationMessages.errors.image_url.pattern,
-          },
-        })}
 
         <div className={styles.btn}>
           <Button type={"submit"} text={"Cadastrar"} />
-          <Button type={"button"} text={"Voltar"} />
         </div>
       </div>
     </form>
   );
-};
+}
 
-export default TrailForm;
+export default Teste;

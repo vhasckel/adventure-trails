@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { TrailsContext } from "../../context/trailsContext";
-import TrailForm from "../../components/TrailForm";
+import Teste from "../../components/TrailForm";
 
 const RegisterTrailPage = () => {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ const RegisterTrailPage = () => {
     navigate("/explorar-trilhas");
   };
 
-  return <TrailForm onSubmit={handleRegistration} />;
+  return <Teste onSubmit={handleRegistration} />;
 };
 
 export default RegisterTrailPage;

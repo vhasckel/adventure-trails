@@ -1,22 +1,24 @@
-import TextField from "@mui/material/TextField";
+import { TextField } from "@mui/material";
 
-const InputField = ({ label, type, id, onChange, value, step, error }) => {
-  return (
-    <>
-      <TextField
-        id={id}
-        label={label}
-        type={type}
-        variant="outlined"
-        onChange={onChange}
-        value={value}
-        step={step}
-        required
-        error={!!error}
-        helperText={error ? error.message : ""}
-      />
-    </>
-  );
-};
+const InputField = ({
+  name,
+  label,
+  validationRules,
+  register,
+  errors,
+  type = "text",
+  ...rest
+}) => (
+  <TextField
+    {...register(name, validationRules)}
+    id={`outlined-${name}`}
+    label={label}
+    variant="outlined"
+    type={type}
+    error={!!errors[name]}
+    helperText={errors[name]?.message || ""}
+    {...rest}
+  />
+);
 
 export default InputField;
